@@ -1,6 +1,6 @@
-export const timeSlotStyles = { width: '80px', height: '40px'}
+export const timeSlotStyles = { width: '80px', height: '60px'}
 
-export const toggleGroupStyles = { display: 'flex', flexDirection: 'column', flexWrap: 'wrap'}
+export const toggleGroupStyles = { display: 'flex', flexDirection: 'column', flexWrap: 'wrap', height: '1440px'}
 
 export const timeTable = [
     { index: 0, time: '0:00' },

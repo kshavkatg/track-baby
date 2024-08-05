@@ -40,13 +40,13 @@ export default function DefaultFeed() {
             <Stack alignItems="center" spacing={2}>
                 <Typography>Стандартный</Typography>
                 <ToggleButtonGroup
-                    style={toggleGroupStyles}
+                    style={{ display: 'flex', flexDirection: 'column', flexWrap: 'wrap' }}
                     value={formats}
                     onChange={handleFormat}
                     aria-label="text formatting"
                 >
                     {timeTable.map(({index, time}) => (
-                        <ToggleButton color="secondary" key={time} style={timeSlotStyles} value={index} aria-label={time} disabled={isDisabled}>
+                        <ToggleButton color="secondary" key={time} style={{ ...timeSlotStyles, width: '100px'}} value={index} aria-label={time} disabled={isDisabled}>
                             {time}
                         </ToggleButton>
                     ))}

@@ -22,15 +22,15 @@ export default function Feed() {
             <Typography>Фактический</Typography>
 
             <ToggleButtonGroup
-                style={toggleGroupStyles}
+                style={{ display: 'flex', flexDirection: 'column', flexWrap: 'wrap' }}
                 value={formats}
                 onChange={handleFormat}
                 aria-label="text formatting"
             >
                 {timeTable.map(({index, time}) => (
-                    <ToggleButton color="warning" key={time} style={{ width: '180px', height: '40px'}} value={index} aria-label={time}>
+                    <ToggleButton color="warning" key={time} style={{ width: '180px', height: '60px'}} value={index} aria-label={time}>
                         {time}
-                        <input style={{ background: 'white', borderWidth: '1px', borderColor: 'gray', borderRadius: '4px', marginLeft: '20px', width: '80px', height: '25px'}} type="text" value={feedValues[index]} onChange={(e) => {
+                        <input style={{ color: 'black', background: 'white', borderWidth: '1px', borderColor: 'gray', borderRadius: '4px', marginLeft: '20px', width: '80px', height: '40px'}} type="text" value={feedValues[index]} onChange={(e) => {
                             const value = e.target.value
                             if (isNaN(value)) return
                             const obj = {...feedValues}
