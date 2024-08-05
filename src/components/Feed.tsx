@@ -1,13 +1,6 @@
 import * as React from 'react';
-import { ToggleButton, Typography, Stack } from '@mui/material';
-import { styled } from '@mui/material/styles';
-import sleepImage from '/sleep.png'
-import wakeImage from '/wake.png'
-
-import ToggleButtonGroup, {
-    toggleButtonGroupClasses,
-} from '@mui/material/ToggleButtonGroup';
-import {timeSlotStyles, timeTable, toggleGroupStyles} from "./constants";
+import { ToggleButton, Typography, Stack, ToggleButtonGroup } from '@mui/material';
+import {timeTable, toggleGroupStyles} from "./constants";
 import {useState} from "react";
 
 export default function Feed() {
@@ -26,6 +19,8 @@ export default function Feed() {
 
     return (
         <Stack alignItems="center" spacing={2}>
+            <Typography>Фактический</Typography>
+
             <ToggleButtonGroup
                 style={toggleGroupStyles}
                 value={formats}
@@ -33,9 +28,9 @@ export default function Feed() {
                 aria-label="text formatting"
             >
                 {timeTable.map(({index, time}) => (
-                    <ToggleButton color="warning" key={time} style={{ width: '240px', height: '40px'}} value={index} aria-label={time}>
+                    <ToggleButton color="warning" key={time} style={{ width: '180px', height: '40px'}} value={index} aria-label={time}>
                         {time}
-                        <input style={{ marginLeft: '20px', width: '80px', height: '25px'}} type="text" value={feedValues[index]} onChange={(e) => {
+                        <input style={{ background: 'white', borderWidth: '1px', borderColor: 'gray', borderRadius: '4px', marginLeft: '20px', width: '80px', height: '25px'}} type="text" value={feedValues[index]} onChange={(e) => {
                             const value = e.target.value
                             if (isNaN(value)) return
                             const obj = {...feedValues}

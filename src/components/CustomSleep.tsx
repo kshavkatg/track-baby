@@ -1,27 +1,14 @@
 import * as React from 'react';
-import { ToggleButton, Typography, Stack } from '@mui/material';
-import { styled } from '@mui/material/styles';
-import sleepImage from '/sleep.png'
-import wakeImage from '/wake.png'
-
-import ToggleButtonGroup, {
-    toggleButtonGroupClasses,
-} from '@mui/material/ToggleButtonGroup';
+import { ToggleButton, Typography, Stack, ToggleButtonGroup } from '@mui/material';
 import {timeSlotStyles, timeTable, toggleGroupStyles} from "./constants";
 import {useState} from "react";
 
 export default function CustomSleep() {
     const [formats, setFormats] = useState(() => []);
     const [sleepHours, setSleepHours] = useState(0);
-    const [wakeHours, setWakeHours] = useState(0)
     const [daySleepHours, setDaySleepHours] = useState(0)
     const [nightSleepHours, setNightSleepHours] = useState(0)
 
-
-
-    const handleReset = () => {
-        setFormats([])
-    }
 
     const handleFormat = (
         event: React.MouseEvent<HTMLElement>,

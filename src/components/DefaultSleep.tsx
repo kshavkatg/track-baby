@@ -1,14 +1,5 @@
 import * as React from 'react';
-import FormatBoldIcon from '@mui/icons-material/FormatBold';
-import FormatItalicIcon from '@mui/icons-material/FormatItalic';
-import FormatUnderlinedIcon from '@mui/icons-material/FormatUnderlined';
-import FormatColorFillIcon from '@mui/icons-material/FormatColorFill';
-import ArrowDropDownIcon from '@mui/icons-material/ArrowDropDown';
-import {ToggleButton, Stack, Typography } from '@mui/material';
-import { styled } from '@mui/material/styles';
-import ToggleButtonGroup, {
-    toggleButtonGroupClasses,
-} from '@mui/material/ToggleButtonGroup';
+import {ToggleButton, Stack, Typography, ToggleButtonGroup } from '@mui/material';
 import {timeSlotStyles, timeTable, toggleGroupStyles} from "./constants";
 
 

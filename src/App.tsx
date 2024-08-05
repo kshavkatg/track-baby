@@ -1,13 +1,11 @@
 import {SyntheticEvent, useState} from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
 import DefaultSleep from "./components/DefaultSleep";
 import CustomSleep from "./components/CustomSleep";
-import {TabPanel} from "./components/TabPanel";
 import {Tabs, Stack} from '@mui/material';
 import Tab from '@mui/material/Tab';
 import Feed from "./components/Feed";
+import DefaultFeed from "./components/DefaultFeed";
 
 
 function App() {
@@ -37,7 +35,10 @@ function App() {
                   <CustomSleep/>
               </>)}
               {value === 1 && (
-                  <Feed />
+                  <>
+                    <DefaultFeed />
+                      <Feed />
+                  </>
               )}
           </div>
       </Stack>
